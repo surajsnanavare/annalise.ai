@@ -14,6 +14,7 @@ urlpatterns = [
 
     path(settings.API_PREFIX + 'users/', include('users.api.urls')),
     path(settings.API_PREFIX + 'auth/', include('authentication.api.urls')),
+    path(settings.API_PREFIX + 'image/', include('images.api.urls')),
 ]
 
 if settings.DEBUG:

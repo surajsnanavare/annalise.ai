@@ -31,6 +31,5 @@ run:
 
 # Run tests
 test:
-	@flake8 .
 	@coverage run  --source=$(path) manage.py test --keepdb --verbosity=$(verbosity) $(path)
 	@coverage report -m

